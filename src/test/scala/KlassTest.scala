@@ -19,5 +19,10 @@ class KlassSpec extends FlatSpec with matchers.ShouldMatchers {
       println("by-name parameter")
       x + 1
     }) should equal (60)
+
+    o2.mult2(3) {
+      println("by-name parameter 2")
+      x + 1
+    } should equal (60)
   }
 }
