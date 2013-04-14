@@ -10,6 +10,14 @@ class KlassSpec extends FlatSpec with matchers.ShouldMatchers {
     o2.mult(3) should equal (12)
   
     // Failure Case
-    o2.mult(3) should equal (11)
+    // o2.mult(3) should equal (11)
+
+
+    // by-name parameter example
+    val x = 4
+    o2.mult(3, { 
+      println("by-name parameter")
+      x + 1
+    }) should equal (60)
   }
 }
